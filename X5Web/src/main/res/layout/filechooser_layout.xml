@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+            android:id="@+id/frame_web_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></FrameLayout>
+
+
+    <com.example.test_webview_demo.utils.X5WebView
+            android:layout_centerInParent="true"
+            android:id="@+id/web_filechooser"
+            android:layout_width="1280px"
+            android:layout_height="752px">
+
+
+    </com.example.test_webview_demo.utils.X5WebView>
+
+
+</RelativeLayout>

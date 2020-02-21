@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+        android:orientation="vertical"
+        android:background="#FFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+            android:textSize="30sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="太和优鸿智能教育学生端"
+            android:textColor="#000"
+            android:padding="10dp"
+            />
+
+    <GridView
+        android:id="@+id/item_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:gravity="center_horizontal"
+        android:horizontalSpacing="1dp"
+        android:numColumns="5"
+        android:paddingTop="1dp"
+        android:verticalSpacing="1dp" />
+
+    <TextView
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="首次使用，请授予所有权限，然后退出，再重新进入"/>
+
+</LinearLayout>
