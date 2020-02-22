@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 import com.tencent.smtt.export.external.interfaces.IX5WebSettings;
@@ -13,14 +14,25 @@ import com.tencent.smtt.sdk.WebView;
 import com.tencent.smtt.sdk.WebViewClient;
 
 public class X5WebView extends WebView {
+    private static final String TAG = "X5WebView";
     private WebViewClient client = new WebViewClient() {
         /**
          * 防止加载网页时调起系统浏览器
          */
+        @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             view.loadUrl(url);
+//            Log.d(TAG, "shouldOverrideUrlLoading: " +url);
             return true;
         }
+
+        @Override
+        public void onLoadResource(WebView webView, String s) {
+//            Log.d(TAG, "onLoadResource: " +s);
+
+            super.onLoadResource(webView, s);
+        }
+
     };
 
     public X5WebView(Context context, AttributeSet attributeSet) {
@@ -60,7 +72,7 @@ public class X5WebView extends WebView {
         webSetting.setCacheMode(WebSettings.LOAD_DEFAULT);
         webSetting.setAppCachePath(getContext().getCacheDir().getAbsolutePath() + "/webcache");
 
-        getSettingsExtension().setPageCacheCapacity(IX5WebSettings.DEFAULT_CACHE_CAPACITY);//extension
+//        getSettingsExtension().setPageCacheCapacity(IX5WebSettings.DEFAULT_CACHE_CAPACITY);//extension
 
         // settings 的设计
     }

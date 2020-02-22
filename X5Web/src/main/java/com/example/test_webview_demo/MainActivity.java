@@ -2,7 +2,6 @@ package com.example.test_webview_demo;
 
 import android.Manifest;
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -16,6 +15,7 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
+import android.widget.LinearLayout;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -65,11 +65,12 @@ public abstract class MainActivity extends AppCompatActivity {
         if (!main_initialized) {
             this.new_init();
         }
-        initTabs();
+        initTips();
     }
 
-    protected void initTabs(){
-        final ProgressDialog progressDialog = ProgressDialog.show(this, null,"内核加载中...  请确保网络畅通");
+    protected void initTips(){
+        final TextView appVersion = findViewById(R.id.app_version);
+        appVersion.setText("APP版本："+BuildConfig.VERSION_NAME);
         QbSdk.setDownloadWithoutWifi(true);
         QbSdk.initX5Environment(this, new QbSdk.PreInitCallback() {
             @Override
@@ -80,10 +81,12 @@ public abstract class MainActivity extends AppCompatActivity {
             @Override
             public void onViewInitFinished(boolean b) {
                 if (b){
-                    progressDialog.dismiss();
+                    LinearLayout loader_progress = findViewById(R.id.loader_progress);
+                    loader_progress.setVisibility(View.GONE);
+                    Toast.makeText(MainActivity.this, "内核加载完成", Toast.LENGTH_SHORT).show();
+                    appVersion.append("\n内核加载成功，版本："+QbSdk.getTbsVersion(getApplicationContext()));
                 }else {
-                    TextView userTabs = findViewById(R.id.user_tabs);
-                    userTabs.append("\n内核加载失败，可能遇到视频无法播放的问题");
+                    appVersion.append("\n内核加载失败");
                 }
                 Log.d("app", " onViewInitFinished is " + b);
             }
@@ -132,7 +135,6 @@ public abstract class MainActivity extends AppCompatActivity {
                     if (position < intentArgs.length) {
                         Intent intent = new Intent(MainActivity.this,
                                 FullScreenActivity.class);
-
                         intent.putExtra("app_name", intentArgs[position]);
                         MainActivity.this.startActivity(intent);
                     } else {

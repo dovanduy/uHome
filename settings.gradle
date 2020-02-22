@@ -1,2 +1,2 @@
-include ':app', ':X5Web', ':app2', ':app3', ':app4'
+include ':app', ':X5Web', ':app2', ':app3', ':app4', ':okhttplib'
 rootProject.name='My Application'

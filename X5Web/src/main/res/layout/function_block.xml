@@ -4,7 +4,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
         android:layout_margin="1dp"
-        android:background="#ffffff"
         android:orientation="vertical"
         android:padding="10dp">
 
@@ -22,10 +21,10 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:gravity="center_horizontal"
             android:textColor="@android:color/background_dark"
-            android:textSize="11dp" />
+            android:textSize="14sp" />
 
 
 </LinearLayout>
