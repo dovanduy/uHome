@@ -8,7 +8,7 @@ public class MainActivity extends com.example.test_webview_demo.MainActivity {
 
 
     private static final String[] intentArgs = {
-            "file:///android_asset/app_sx_tb/index.html/index.html",
+            "file:///android_asset/app_sx_tb/index.html",
             "file:///android_asset/app_wl_tb/index.html",
             "file:///android_asset/app_hx_tb/index.html",
             "https://yy2tbstu.uhongedu.com"};

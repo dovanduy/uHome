@@ -1,2 +1,2 @@
-include ':app', ':X5Web', ':app2', ':app3'
+include ':app', ':X5Web', ':app2', ':app3', ':app4'
 rootProject.name='My Application'

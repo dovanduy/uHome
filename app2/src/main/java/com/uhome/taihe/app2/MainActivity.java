@@ -4,7 +4,7 @@ package com.uhome.taihe.app2;
 public class MainActivity extends com.example.test_webview_demo.MainActivity {
 
     private static final String[] intentArgs = {
-            "file:///android_asset/app_sx_zk_jx/index.html/index.html",
+            "file:///android_asset/app_sx_zk_jx/index.html",
             "file:///android_asset/app_wl_zk_jx/index.html",
             "file:///android_asset/app_hx_zk_jx/index.html",
             "file:///android_asset/app_sx_zk_gl/index.html"};
