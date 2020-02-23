@@ -10,6 +10,7 @@ import android.graphics.Point;
 import android.net.Uri;
 import android.net.http.SslError;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.webkit.ValueCallback;
@@ -84,6 +85,7 @@ public class CrossWalkActivity extends XWalkActivity {
         }
     }
 
+//    private static final String TAG = "CrossWalkActivity";
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onXWalkReady() {
@@ -103,21 +105,24 @@ public class CrossWalkActivity extends XWalkActivity {
         setting.setAllowContentAccess(true);
         setting.setDomStorageEnabled(true);
         xWalkView.requestFocus();
-        setting.setCacheMode(WebSettings.LOAD_NO_CACHE);
+        setting.setCacheMode(WebSettings.LOAD_DEFAULT);
         xWalkView.setResourceClient(new XWalkResourceClient(xWalkView) {
             @Override
             public void onLoadStarted(XWalkView view, String url) {
                 super.onLoadStarted(view, url);
+//                Log.d(TAG, "onLoadStarted() called with: view = [" + view + "], url = [" + url + "]");
             }
 
             @Override
             public void onLoadFinished(XWalkView view, String url) {
                 super.onLoadFinished(view, url);
+//                Log.d(TAG, "onLoadFinished() called with: view = [" + view + "], url = [" + url + "]");
             }
 
             @Override
             public boolean shouldOverrideUrlLoading(XWalkView view, String url) {
                 view.loadUrl(url);
+//                Log.d(TAG, "shouldOverrideUrlLoading() called with: view = [" + view + "], url = [" + url + "]");
                 return true;
             }
 

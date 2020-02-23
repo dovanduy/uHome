@@ -20,8 +20,9 @@
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true">
         <activity
+                android:exported="false"
                 android:name=".CrossWalkActivity"
-                android:screenOrientation="landscape">
+                android:screenOrientation="landscape" >
             <!--            <intent-filter>-->
             <!--                <action android:name="android.intent.action.MAIN" />-->
             <!--                <category android:name="android.intent.category.LAUNCHER" />-->

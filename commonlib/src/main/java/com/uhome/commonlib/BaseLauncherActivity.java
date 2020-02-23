@@ -58,6 +58,7 @@ public abstract class BaseLauncherActivity extends AppCompatActivity {
             this.context = this;
             setContentView(R.layout.activity_main_advanced);
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
             reqPermission();
             intentArgs = initArgs();
             iconResourse = initResource();
