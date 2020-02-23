@@ -1,10 +1,10 @@
 package com.uHome.taihe.app4;
 
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
 
-public class MainActivity extends com.example.test_webview_demo.MainActivity {
+import com.uhome.commonlib.BaseLauncherActivity;
+
+public class MainActivity extends BaseLauncherActivity {
     private static final String[] intentArgs = {
             "file:///android_asset/app_xx_sx_sw/index.html",
             "file:///android_asset/app_xx_sx_tb/index.html",

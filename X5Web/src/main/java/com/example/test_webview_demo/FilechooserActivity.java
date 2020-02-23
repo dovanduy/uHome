@@ -109,7 +109,6 @@ public class FilechooserActivity extends Activity {
      */
     @Override
     protected void onDestroy() {
-        // TODO Auto-generated method stub
         if (this.webView != null) {
             webView.destroy();
         }

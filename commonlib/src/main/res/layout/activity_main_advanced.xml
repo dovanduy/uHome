@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bj"
+        android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#3eee"
+            android:elevation="1dp"
+            android:gravity="center_vertical">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:text="太和优鸿智能教育学生端"
+                android:textColor="#000"
+                android:textSize="24sp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+            android:layout_gravity="end"
+            android:background="#3eee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="end"
+            android:text="首次使用，请授予所有权限，并等待内核加载完全" />
+
+    <GridView
+
+            android:id="@+id/item_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
+            android:gravity="center_horizontal"
+            android:horizontalSpacing="1dp"
+            android:numColumns="5"
+            android:paddingTop="1dp"
+            android:verticalSpacing="1dp" />
+
+    <TextView
+
+            android:layout_marginRight="20dp"
+            android:layout_gravity="end"
+            android:id="@+id/app_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end" />
+</LinearLayout>

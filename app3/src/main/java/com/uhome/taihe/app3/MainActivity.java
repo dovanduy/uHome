@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends com.example.test_webview_demo.MainActivity {
+import com.uhome.commonlib.BaseLauncherActivity;
+
+public class MainActivity extends BaseLauncherActivity {
 
 
     private static final String[] intentArgs = {
