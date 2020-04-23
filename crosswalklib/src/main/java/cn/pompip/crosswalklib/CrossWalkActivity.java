@@ -104,8 +104,10 @@ public class CrossWalkActivity extends XWalkActivity {
         setting.setAllowContentAccess(true);
         setting.setAllowContentAccess(true);
         setting.setDomStorageEnabled(true);
-        xWalkView.requestFocus();
+        setting.setDatabaseEnabled(true);
         setting.setCacheMode(WebSettings.LOAD_DEFAULT);
+
+        xWalkView.requestFocus();
         xWalkView.setResourceClient(new XWalkResourceClient(xWalkView) {
             @Override
             public void onLoadStarted(XWalkView view, String url) {

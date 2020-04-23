@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.myapplication">
-
+    <uses-permission android:name="android.permission.INJECT_EVENTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -9,6 +10,20 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+
+        <!--表明这是一个xposed插件-->
+        <meta-data
+                android:name="xposedmodule"
+                android:value="true" />
+        <!--指定xposed的最小版本-->
+        <meta-data
+                android:name="xposedminversion"
+                android:value="80+" />
+        <!--插件的描述-->
+        <meta-data
+                android:name="xposeddescription"
+                android:value="hello world" />
+
         <activity
                 android:name="com.example.myapplication.MainActivity"
                 android:label="@string/app_name"

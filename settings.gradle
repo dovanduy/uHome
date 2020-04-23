@@ -1,3 +1,4 @@
-include ':app', ':X5Web', ':app2', ':app3', ':app4', ':okhttplib', ':crosswalklib', ':commonlib'
+include ':app', ':X5Web', ':app2', ':app3', ':app4','app5', ':okhttplib', ':crosswalklib', ':commonlib'
 rootProject.name='My Application'
 include ':crosswalkwebview23535894arm'
+include ':xpLoader'

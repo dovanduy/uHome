@@ -29,6 +29,6 @@ dependencies {
 
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    implementation 'com.squareup.okhttp3:okhttp:4.4.0'
-    implementation 'com.alibaba:fastjson:1.1.71.android'
+    api 'com.squareup.okhttp3:okhttp:4.4.0'
+    api 'com.alibaba:fastjson:1.1.71.android'
 }

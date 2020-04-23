@@ -31,4 +31,19 @@ public class MainActivity extends BaseLauncherActivity {
     protected String[] initTitle() {
         return titles;
     }
+
+    @Override
+    protected String initVersionName() {
+        return BuildConfig.VERSION_NAME;
+    }
+
+    @Override
+    protected int initVersionCode() {
+        return BuildConfig.VERSION_CODE;
+    }
+
+    @Override
+    protected String initFirAppId() {
+        return "5e4f9ad0f945481dfc0c7bc8";
+    }
 }

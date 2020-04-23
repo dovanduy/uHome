@@ -35,15 +35,15 @@ public class EventInjector {
 
     /* access modifiers changed from: 0000 */
     public void injectInputEvent(int i, int i2, int i3) {
-        int i4 = i2;
         long uptimeMillis = SystemClock.uptimeMillis();
         if (i == 0) {
             this.mLastTime = uptimeMillis;
         }
-        if (i4 > 0) {
-            setPointerCoords(i4, i3);
+        if (i2 > 0) {
+            setPointerCoords(i2, i3);
         }
-        this.mInputManager.injectInputEvent(MotionEvent.obtain(this.mLastTime, uptimeMillis, i, 1, this.pointerProperties, this.pointerCoords, 0, 1, 1.0f, 1.0f, 0, 0, 4098, 0), 0);
+        MotionEvent obtain = MotionEvent.obtain(this.mLastTime, uptimeMillis, i, 1, this.pointerProperties, this.pointerCoords, 0, 1, 1.0f, 1.0f, 0, 0, 4098, 0);
+        this.mInputManager.injectInputEvent(obtain, 0);
     }
 
     /* access modifiers changed from: 0000 */
